@@ -1,0 +1,129 @@
+/* lear */
+/* CSS */
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body{
+    background-color: #f8f8ff;
+}
+
+header{
+    text-align: center;
+}
+
+h1{
+    margin: 1em auto;
+    font-size: 2.4em;
+    letter-spacing: 2px;
+    color: #113;
+    display: inline-block;
+}
+
+h1::after{
+    content: '';
+    width: 40%;
+    height: 2px;
+    display: block;
+    margin: 5px auto auto;
+    background-color: goldenrod;
+}
+
+ul{
+    list-style: none;
+}
+
+ul li{
+    display: inline-block;
+    margin: auto 5px;
+}
+
+ul li button{
+    padding: 6px 12px;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+    background-color: transparent;
+    color: goldenrod;
+    border-color: goldenrod;
+    cursor: pointer;
+}
+
+main{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 90%;
+    margin: 3em auto;
+    grid-gap: 3em;
+}
+
+.container{
+    display: flex;
+    gap: 1em;
+}
+
+img{
+    width: 50%;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+    border: 3px solid goldenrod;
+}
+
+.box{
+    width: 50%;
+}
+
+.box > div{
+    display: flex;
+    justify-content: space-between;
+    letter-spacing: 2px;
+}
+
+.box > div h3{
+    color: #113;
+}
+
+.box > div p{
+    color: goldenrod;
+}
+
+.box hr{
+    border: none;
+    background-color: #000;
+    height: 1px;
+    margin: 10px auto 1em;
+}
+
+.box p{
+    line-height: 22px;
+    color: #246;
+}
+
+@media screen and (max-width: 1300px){
+    main{
+        grid-template-columns: 1fr;
+    }
+
+    .container{
+        flex-direction: column;
+        max-width: 550px;
+        margin: auto;
+    }
+
+    img{
+        width: 100%;
+    }
+
+    .box{
+        width: 100%;
+    }
+}
